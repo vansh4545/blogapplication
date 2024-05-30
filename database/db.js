@@ -4,13 +4,14 @@ import dotenv from "dotenv"
 dotenv.config();
 
 const Connection= async () =>{
-  const URL= process.env.MONGODB_URI;
+  const USERNAME= process.env.DB_USERNAME;
+  const PASSWORD= process.env.DB_PASSWORD;
   try{
-       await mongoose.connect("mongodb+srv://vanshgupta4545:25July@2003@cluster0.ymwz4v3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+       await mongoose.connect(`mongodb+srv://vanshgupta4545:25July2003@cluster0.ymwz4v3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
        console.log('database connected successfully');
     }
   catch(error){
-       console.log(URL);
+       //console.log(URL);
        console.log('database connected unsuccesfully',error);
   }
 }
