@@ -18,8 +18,8 @@ app.use('/',Router);
 // if(process.env.NODE_ENV === 'production'){
 //     app.use(express.static("client/build"));
 // }
-//const PORT = process.env.PORT || 8000;
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
+//const PORT = 8000;
 app.listen(PORT, ()=> console.log(`Server is successfully running on pt ${PORT}`));
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD= process.env.DB_PASSWORD;
