@@ -5,7 +5,7 @@ dotenv.config();
 const username = process.env.DB_USERNAME;
 const password =  process.env.DB_PASSWORD;
 const storage = new GridFsStorage({
-    url :process.env.MONGODB_URI,
+    url :`mongodb+srv://vanshgupta4545:25July2003@cluster0.ymwz4v3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
     options: {useNewUrlParser: true},
     file: (request, file) => {
         const match = ["image/png", "image/jpg","image/jpeg"];
