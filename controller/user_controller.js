@@ -30,13 +30,13 @@ export const signupUser =async(request,response)=>{
 
          const newUser= new User(user);
          await newUser.save();
-          //console.log(user);
+          
          return response.status(200).json({msg: "signup successful"})
     }
     catch(error){
           console.log(error);
          return response.status(500).json({msg:"signup unsuccessful"})
-          // return response.status(500).send({error, msg:"unsuccess" , success:false})
+         
     }
 }
 
